@@ -1,103 +1,103 @@
-# 🔋 مشروع التعلّم الآلي لتوقّع حالة البطارية
+# 🔋 Machine Learning Project: Battery State of Health Prediction
 
-> 🤖 مشروع تطبيقي في مجال **Machine Learning** لتحليل بيانات البطاريات وتوقّع **حالة البطارية (SOH)** باستخدام الانحدار الخطي.
-
----
-
-## ✨ عن المشروع
-
-في هذا المشروع تم استخدام تقنيات التعلّم الآلي لتحليل مجموعة من بيانات البطاريات، ودراسة العلاقة بين خصائص البطارية المختلفة و **State of Health (SOH)**.
-
-الهدف الأساسي هو بناء نموذج يستطيع التنبؤ بحالة البطارية اعتمادًا على بعض الخصائص المقاسة لها. 🔋📊
+> 🤖 A practical **Machine Learning** project focused on analyzing battery data and predicting **State of Health (SOH)** using Linear Regression.
 
 ---
 
-## 🎯 أهداف المشروع
+## ✨ About the Project
 
-- 🔍 استكشاف بيانات البطاريات وفهم خصائصها.
-- 🧹 التحقق من جودة البيانات والقيم المفقودة والتكرارات.
-- 📊 تحليل العلاقات بين المتغيرات المختلفة.
-- 🤖 بناء نماذج باستخدام **Linear Regression**.
-- 📈 مقارنة أداء النماذج باستخدام مقاييس التقييم.
-- 🧠 فهم تأثير بعض خصائص البطارية على قيمة **SOH**.
+In this project, Machine Learning techniques were used to analyze a battery dataset and study the relationship between different battery characteristics and **State of Health (SOH)**.
+
+The main goal is to build a model that can predict the battery's health based on selected measured features. 🔋📊
 
 ---
 
-## 📁 البيانات المستخدمة
+## 🎯 Project Objectives
 
-تحتوي مجموعة البيانات على:
+- 🔍 Explore and understand the battery dataset.
+- 🧹 Check data quality, missing values, and duplicates.
+- 📊 Analyze relationships between different variables.
+- 🤖 Build Machine Learning models using **Linear Regression**.
+- 📈 Compare model performance using evaluation metrics.
+- 🧠 Understand how selected battery characteristics relate to **SOH**.
 
-- **2000 صف**
-- **13 متغيرًا**
+---
 
-ومن أهم المتغيرات:
+## 📁 Dataset
 
-| المتغير | الوصف |
+The dataset contains:
+
+- **2,000 rows**
+- **13 variables**
+
+### Main Variables
+
+| Variable | Description |
 |---|---|
-| 🔋 BatteryID | معرّف البطارية |
-| 🏷️ BatchID | رقم/معرّف المجموعة |
-| 🔄 Cycle | رقم دورة البطارية |
-| ⚡ Voltage | الجهد |
-| 🔌 Current | التيار |
-| 🌡️ Temperature | درجة الحرارة |
-| ⏱️ ChargeTime | زمن الشحن |
-| ⏱️ DischargeTime | زمن التفريغ |
-| 🧲 InternalResistance | المقاومة الداخلية |
-| 🔋 Capacity | السعة |
-| 💧 AmbientHumidity | الرطوبة المحيطة |
-| ⚙️ C_Rate | معدل الشحن/التفريغ |
-| ❤️ SOH | حالة البطارية |
+| 🔋 BatteryID | Battery identifier |
+| 🏷️ BatchID | Batch identifier |
+| 🔄 Cycle | Battery cycle number |
+| ⚡ Voltage | Battery voltage |
+| 🔌 Current | Battery current |
+| 🌡️ Temperature | Temperature |
+| ⏱️ ChargeTime | Charging time |
+| ⏱️ DischargeTime | Discharging time |
+| 🧲 InternalResistance | Internal resistance |
+| 🔋 Capacity | Battery capacity |
+| 💧 AmbientHumidity | Ambient humidity |
+| ⚙️ C_Rate | Charge/discharge rate |
+| ❤️ SOH | State of Health |
 
 ---
 
-## 🔬 خطوات العمل
+## 🔬 Project Workflow
 
-### 1️⃣ استيراد المكتبات
+### 1️⃣ Importing Libraries
 
-تم استخدام مجموعة من مكتبات Python، منها:
+The project uses several Python libraries, including:
 
 - `NumPy`
 - `Pandas`
 - `Matplotlib`
 - `Scikit-learn`
 
-### 2️⃣ استكشاف البيانات 🔎
+### 2️⃣ Data Exploration 🔎
 
-تم فحص البيانات والتعرّف على:
+The dataset was examined to identify:
 
-- عدد الصفوف والأعمدة.
-- أنواع المتغيرات.
-- القيم المفقودة.
-- التكرارات.
-- الإحصاءات الوصفية.
+- Number of rows and columns.
+- Variable types.
+- Missing values.
+- Duplicate records.
+- Descriptive statistics.
 
-### 3️⃣ تحليل البيانات 📊
+### 3️⃣ Data Analysis 📊
 
-تم إنشاء مجموعة من الرسومات والتحليلات لفهم البيانات والعلاقات بين المتغيرات المختلفة.
+Different visualizations and analyses were performed to understand the dataset and explore relationships between the variables.
 
-كما تم استخدام **Correlation Analysis** لدراسة قوة العلاقة بين المتغيرات.
+**Correlation Analysis** was also used to examine the strength of relationships between variables.
 
-### 4️⃣ بناء نماذج Machine Learning 🤖
+### 4️⃣ Building Machine Learning Models 🤖
 
-تم استخدام **Linear Regression** لبناء نماذج لتوقّع قيمة **SOH**.
+**Linear Regression** was used to build models for predicting **SOH**.
 
-وتمت تجربة نماذج تعتمد على مجموعة مختلفة من الخصائص، بهدف دراسة تأثير إضافة المتغيرات على أداء النموذج.
+Different combinations of battery features were tested to study how adding variables affects model performance.
 
-### 5️⃣ تقييم النماذج 📈
+### 5️⃣ Model Evaluation 📈
 
-تم تقييم النماذج باستخدام:
+The models were evaluated using:
 
 **MAE — Mean Absolute Error**
 
-لقياس متوسط مقدار الخطأ بين القيم الحقيقية والقيم المتوقعة.
+Measures the average absolute difference between the actual and predicted values.
 
 **R² — R-squared**
 
-لقياس مدى قدرة النموذج على تفسير التغير في البيانات.
+Measures how well the model explains the variation in the data.
 
 ---
 
-## 🧠 الأدوات والتقنيات المستخدمة
+## 🧠 Tools & Technologies
 
 🐍 **Python**
 
@@ -111,7 +111,7 @@
 
 ---
 
-## 📓 محتويات المشروع
+## 📓 Project Contents
 
 ```text
 Machine-Learning-Project/
