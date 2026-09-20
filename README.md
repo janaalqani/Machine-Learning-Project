@@ -1,22 +1,121 @@
-# Machine Learning Project
+# 🔋 مشروع التعلّم الآلي لتوقّع حالة البطارية
 
-## Overview
-This project focuses on predicting Battery State of Health (SOH)
-using machine learning techniques.
+> 🤖 مشروع تطبيقي في مجال **Machine Learning** لتحليل بيانات البطاريات وتوقّع **حالة البطارية (SOH)** باستخدام الانحدار الخطي.
 
-## Dataset
-The dataset contains 2000 battery records and 13 variables,
-including voltage, current, temperature, cycle, capacity,
-internal resistance, and SOH.
+---
 
-## Methods
-- Data inspection and cleaning
-- Exploratory data analysis
-- Correlation analysis
-- Linear Regression
-- Model evaluation using MAE and R²
+## ✨ عن المشروع
 
-## Models
-1. Cycle Only
-2. Cycle + Internal Resistance
-3. Cycle + Internal Resistance + Capacity
+في هذا المشروع تم استخدام تقنيات التعلّم الآلي لتحليل مجموعة من بيانات البطاريات، ودراسة العلاقة بين خصائص البطارية المختلفة و **State of Health (SOH)**.
+
+الهدف الأساسي هو بناء نموذج يستطيع التنبؤ بحالة البطارية اعتمادًا على بعض الخصائص المقاسة لها. 🔋📊
+
+---
+
+## 🎯 أهداف المشروع
+
+- 🔍 استكشاف بيانات البطاريات وفهم خصائصها.
+- 🧹 التحقق من جودة البيانات والقيم المفقودة والتكرارات.
+- 📊 تحليل العلاقات بين المتغيرات المختلفة.
+- 🤖 بناء نماذج باستخدام **Linear Regression**.
+- 📈 مقارنة أداء النماذج باستخدام مقاييس التقييم.
+- 🧠 فهم تأثير بعض خصائص البطارية على قيمة **SOH**.
+
+---
+
+## 📁 البيانات المستخدمة
+
+تحتوي مجموعة البيانات على:
+
+- **2000 صف**
+- **13 متغيرًا**
+
+ومن أهم المتغيرات:
+
+| المتغير | الوصف |
+|---|---|
+| 🔋 BatteryID | معرّف البطارية |
+| 🏷️ BatchID | رقم/معرّف المجموعة |
+| 🔄 Cycle | رقم دورة البطارية |
+| ⚡ Voltage | الجهد |
+| 🔌 Current | التيار |
+| 🌡️ Temperature | درجة الحرارة |
+| ⏱️ ChargeTime | زمن الشحن |
+| ⏱️ DischargeTime | زمن التفريغ |
+| 🧲 InternalResistance | المقاومة الداخلية |
+| 🔋 Capacity | السعة |
+| 💧 AmbientHumidity | الرطوبة المحيطة |
+| ⚙️ C_Rate | معدل الشحن/التفريغ |
+| ❤️ SOH | حالة البطارية |
+
+---
+
+## 🔬 خطوات العمل
+
+### 1️⃣ استيراد المكتبات
+
+تم استخدام مجموعة من مكتبات Python، منها:
+
+- `NumPy`
+- `Pandas`
+- `Matplotlib`
+- `Scikit-learn`
+
+### 2️⃣ استكشاف البيانات 🔎
+
+تم فحص البيانات والتعرّف على:
+
+- عدد الصفوف والأعمدة.
+- أنواع المتغيرات.
+- القيم المفقودة.
+- التكرارات.
+- الإحصاءات الوصفية.
+
+### 3️⃣ تحليل البيانات 📊
+
+تم إنشاء مجموعة من الرسومات والتحليلات لفهم البيانات والعلاقات بين المتغيرات المختلفة.
+
+كما تم استخدام **Correlation Analysis** لدراسة قوة العلاقة بين المتغيرات.
+
+### 4️⃣ بناء نماذج Machine Learning 🤖
+
+تم استخدام **Linear Regression** لبناء نماذج لتوقّع قيمة **SOH**.
+
+وتمت تجربة نماذج تعتمد على مجموعة مختلفة من الخصائص، بهدف دراسة تأثير إضافة المتغيرات على أداء النموذج.
+
+### 5️⃣ تقييم النماذج 📈
+
+تم تقييم النماذج باستخدام:
+
+**MAE — Mean Absolute Error**
+
+لقياس متوسط مقدار الخطأ بين القيم الحقيقية والقيم المتوقعة.
+
+**R² — R-squared**
+
+لقياس مدى قدرة النموذج على تفسير التغير في البيانات.
+
+---
+
+## 🧠 الأدوات والتقنيات المستخدمة
+
+🐍 **Python**
+
+📊 **Pandas & NumPy**
+
+📈 **Matplotlib**
+
+🤖 **Scikit-learn**
+
+📓 **Jupyter Notebook / Google Colab**
+
+---
+
+## 📓 محتويات المشروع
+
+```text
+Machine-Learning-Project/
+│
+├── 📓 Machine_Learning_Project.ipynb
+├── 📊 battery_dataset.csv
+└── 📖 README.md
